@@ -12,14 +12,12 @@ class Film extends Component {
 
     console.log(this.props.match.params)
 
-    const filteredFilms = films.filter(film => film.id === Number(id))
+    const film = films.find(film => film.id === Number(id))
 
     return (
       <div className="container">
-        <ReturnHomePage />
-
-        {filteredFilms.map((film) => (
           <>
+            <ReturnHomePage />
             <h2 className="card-title text-center mb-3">{film.title}</h2>
             <img src={film.image} className="card-img img-fluid img-thumbnail my-3"/>
             <h4>Director: <strong>{film.director}</strong></h4>
@@ -32,8 +30,6 @@ class Film extends Component {
             <h5 className="card-title">Synapsis:</h5>
             <p className="card-text">{film.description}</p>
           </>
-        ))}
-
       </div>
     );
   }
