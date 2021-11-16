@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 
-class Nav extends Component {
+class ReturnHomePage extends Component {
   render() {
     return (
       <Link to="/">
@@ -11,4 +11,4 @@ class Nav extends Component {
   }
 }
 
-export default Nav;
+export default ReturnHomePage;
